@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&display=block');
+
+.mui-panel {
+    box-shadow: 10px 10px #00000042;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: 3px solid #000000;
+    border-radius: 6px;
+
+    background-image: linear-gradient(#ffffff, #dedede);
+
+}
+
+.mui-appbar {
+    box-shadow: 0px 0px 15px #000000a8;
+    background-image: linear-gradient(to bottom,
+            rgb(63, 226, 255),
+            rgb(255, 58, 189));
+}
+
+.mui-btn {
+    box-shadow: 3px 3px 5px #0000004d;
+    background-color: #9370db;
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+.mui-btn:hover {
+    box-shadow: 3px 3px 5px #00000071;
+    background-color: #ff69b4;
+}
+
+.mui-btn:focus {
+    box-shadow: 3px 3px 5px #00000071;
+    background-color: #ff69b4;
+}
+
+.mui-tabs__bar {
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px #000000;
+    font-family: "Montserrat", sans-serif;
+}
+
+.codeimg {
+    max-width: 80%;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.codelogo {
+    filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.5));
+    max-width: 80%;
+}
+
+.gameimg {
+    max-width: 100%;
+    height: 200px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.gametitle {
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.4);
+    margin-top: -15px;
+    margin-bottom: -5px;
+}
+
+.codeinfo {
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    max-width: 420px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.4);
+    transform: scale(0.85, 1);
+}
+
+.wip {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 2px 2px 0px black;
+    font-size: larger;
+}
+
+.musicicon {
+    width: 60px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 10px;
+    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.659));
+    transition: all 0.2s ease-in-out;
+}
+
+.musicicon:hover {
+    transform: scale(1.2);
+}
+
+.deltamixtitle {
+    font-family: "Montserrat", sans-serif;
+}
+
+.breathe {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nounderline:hover {
+    text-decoration: none;
+}
+
+.squeeze {
+    transform: scale(0.9, 1);
+    transition: all 0.2s ease-in-out;
+    background-color: #00000040;
+    border-radius: 6px;
+}
+
+.squeeze:hover {
+    transform: scale(0.95, 1);
+    text-shadow: 2px 2px 4px #000000;
+    background-color: #00000070;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.mui-tabs__bar>li.mui--is-active {
+    border-bottom: 0px;
+}
+
+.mui-tabs__bar>li.mui--is-active>a {
+    transform: scale(1);
+    text-shadow: 2px 2px 4px black;
+    background-color: rgba(0, 204, 255, 0.538);
+}
+
+iframe {
+    margin-right: 8px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.312);
+    max-width: 900px;
+}
+
+.bcembed {
+    margin-bottom: 10px;
+}
+
+/* This applies to the body of the tabs */
+.mui--is-active {
+    color: white;
+}
+
+.header {
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    color: #000000c5;
+    text-shadow: 1px 1px 2px #0000006c;
+    font-size: 26px;
+    line-height: 120%;
+}
+
+.date {
+    margin-top: 0px;
+    letter-spacing: 3px;
+    color: #00000067
+}
+
+.preview {
+    color: #000000b3;
+    text-align: justify;
+}
+
+body {
+    background-image: linear-gradient(45deg, #4c229e, #a85690);
+    background-attachment: fixed;
+}
+
+#copyright {
+    text-align: center;
+    color: white;
+    font-size: smaller;
+}
+
+#content {
+    color: white;
+    margin: 20px;
+    padding-top: 5px;
+    text-shadow: 1px 1px 2px #000000;
+    line-height: 180%;
+}
+
+#content p {
+    text-align: justify;
+}
+
+body a {
+    font-weight: bold;
+    color: #00ff2a;
+}
+
+.hoverthing {
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+}
+
+.hoverthing:hover {
+    transform: scale(1.1);
+}
+
+#contentFrame {
+    /* background-color: #0000004d; */
+    background-image: linear-gradient(0deg, #00000067, #9292922f);
+    box-shadow: 3px 3px 5px #00000071;
+    margin: 20px auto;
+    margin-top: 25px;
+    border-radius: 10px;
+    max-width: 810px;
+}
+
+@media (max-width: 868px) {
+    #contentFrame {
+        max-width: 94%;
+        /* Remove the maximum width on small screens */
+    }
+}
+
+p,
+ul,
+pre {
+    padding-bottom: 10px;
+}
+
+#content h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 7px;
+    padding: 5px;
+    background-color: #bbbbbb2c;
+    box-shadow: 3px 3px 2px #0000002c;
+}
+
+p img {
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    filter: drop-shadow(2px 2px 1px rgb(0, 0, 0));
+}
+
+pre {
+    background-color: #0000003d;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+code {
+    white-space: pre-wrap;
+    color: rgb(255, 207, 118);
+}
+
+:not(pre)>code {
+    background-color: #00000038;
+    padding: 3px;
+    border-radius: 5px;
+}

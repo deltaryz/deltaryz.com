@@ -1,0 +1,457 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>∆•RYZ</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#bb74ec">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#5B2A9C" />
+
+    <!-- Prevent caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="∆•RYZ">
+    <meta property="og:description"
+        content="Music producer, DJ, developer, artist, graphic designer, weird autistic internet animal.">
+    <meta property="og:image" content="https://deltaryz.com/android-chrome-512x512.png">
+    <meta property="og:url" content="https://deltaryz.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:title" content="∆•RYZ">
+    <meta name="twitter:description"
+        content="Music producer, DJ, developer, artist, graphic designer, weird autistic internet animal.">
+    <meta name="twitter:image" content="https://deltaryz.com/android-chrome-512x512.png">
+    <meta name="twitter:url" content="https://deltaryz.com/">
+
+    <!-- load MUI -->
+    <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+    <div class="mui-appbar">
+        <table width="97%" align="center">
+            <tr style="vertical-align: middle;">
+
+                <td class="mui--appbar-height" style="
+                text-align: center;
+                font-size: smaller;
+                letter-spacing: -1px;
+                color: rgba(0, 0, 0, 0.5);
+                filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
+                " width="110px">
+                    <a href="/">
+                        <img src="deltaryzlogo.png" style="height: 30px; padding-top: 2px; " />
+                    </a>
+                </td>
+
+                <td class="mui--appbar-height" align="right"
+                    style="padding-top: 9px; filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));">
+                    <div class="mui-textfield mui-textfield--float-label">
+
+                        <a class="nounderline" href="https://blog.deltaryz.com">
+                            <img src="svg/blog.svg" alt="Blog"
+                                style="filter: invert(1); height:25px; padding-right: 25px;" />
+                        </a>
+
+                        <a class="nounderline" href="https://github.com/deltaryz/deltaryz.com" target="_blank">
+                            <img src="svg/github.svg" alt="GitHub"
+                                style="filter: invert(1); height:25px; padding-right: 25px;" />
+                        </a>
+
+                        <a class="nounderline" href="https://music.deltaryz.com" target="_blank">
+                            <img src="svg/music-circle.svg" alt="Music" style="filter: invert(1); height:25px;" />
+                        </a>
+
+                    </div>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+
+    <br /><br />
+
+    <div class="mui-container" id="posts" style="max-width: 100%;">
+
+        <!-- Project type tabs -->
+        <ul class="mui-tabs__bar mui-tabs__bar--justified" style="max-width: 100%;">
+            <li class="mui--is-active"><a class="squeeze" data-mui-toggle="tab" data-mui-controls="pane-justified-1"
+                    style="color:white;">DJ</a></li>
+            <li><a class="squeeze" data-mui-toggle="tab" data-mui-controls="pane-justified-2"
+                    style="color:white;">Music</a></li>
+            <li><a class="squeeze" data-mui-toggle="tab" data-mui-controls="pane-justified-3"
+                    style="color:white;">Code</a></li>
+            <li><a class="squeeze" data-mui-toggle="tab" data-mui-controls="pane-justified-4"
+                    style="color:white;">Games</a></li>
+            <li><a class="squeeze" data-mui-toggle="tab" data-mui-controls="pane-justified-5"
+                    style="color:white;">Art</a></li>
+        </ul>
+
+        <div class="mui-tabs__pane mui--is-active" id="pane-justified-1"
+            style="max-width:100%; margin: 20px auto; text-align: center;">
+
+            <!-- DJ Pane -->
+            <p class="mui--text-headline deltamixtitle hoverthing breathe" style="
+                    margin: 0px auto;
+                    border-radius: 6px;
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.35));
+                    padding-top: 10px;
+                    max-width: 300px;
+                ">
+                <a href="https://dj.bronyradio.com/streamhq.mp3" target="_blank"
+                    style="text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.474); text-decoration: underline;">LIVE ON
+                    PVFM</a>
+            </p>
+
+            <p class="mui--text-headline deltamixtitle"
+                style="padding-top: 10px; text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.666);">
+                SATURDAY 1-2AM UTC
+            </p>
+
+            In your device's timezone, that is:
+            <p id="localTime" class="mui--text-title deltamixtitle"
+                style="transform: scale(0.8,1); text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);"></p>
+
+            <a href="https://ponyvillefm.com/shows/28" target="_blank">
+                <img src="img/deltamix.jpg"
+                    style="max-height:350px; max-width: 90%; box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);" />
+            </a>
+
+            <br /><br /><br /><br />
+
+            <!-- omega -->
+            <a href="https://www.youtube.com/watch?v=LwQeOesGQHg" target="_blank">
+                <img style="max-width: 90%; aspect-ratio: 16/9; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.312); margin-right: 8px; margin-bottom: 12px;"
+                    width="560" src="img/omega.jpg" />
+            </a>
+
+            <!-- 09 -->
+            <a href="https://youtu.be/dsX5yKwlkoc?t=483" target="_blank">
+                <img style="max-width: 90%; aspect-ratio: 16/9; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.312); margin-right: 8px; margin-bottom: 12px;"
+                    width="560" src="img/09.jpg" />
+            </a>
+
+            <!-- FE -->
+            <a href="https://www.youtube.com/watch?v=caCVQuBbNRk" target="_blank">
+                <img style="max-width: 90%; aspect-ratio: 16/9; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.312); margin-right: 8px; margin-bottom: 12px;"
+                    width="560" src="img/fe.jpg" />
+            </a>
+
+            <br /><br />
+            Recordings available at:
+            <br />
+            <a href="https://mixes.deltaryz.com/">mixes.deltaryz.com</a>
+            <br />
+
+        </div>
+        <div class="mui-tabs__pane" id="pane-justified-2" style="text-align: center;">
+
+            <!-- Music pane -->
+
+            <!-- Store icons -->
+            <a href="https://open.spotify.com/artist/2dppEydTTicEicYo9P2hIr" target="_blank"
+                style="text-decoration: none; transform: scale(0.5);">
+                <img class="musicicon" src="svg/spotify.svg" alt="Spotify" />
+            </a>
+
+            <a href="https://music.youtube.com/channel/UCx6c7DjuXd0e6Nl_uJWBXdw" target="_blank"
+                style="text-decoration: none;">
+                <img class="musicicon" src="svg/youtube.svg" alt="YouTube" />
+            </a>
+
+            <a href="https://music.apple.com/us/artist/deltaryz/1323686947" target="_blank"
+                style="text-decoration: none;">
+                <img class="musicicon" src="svg/applemusic.svg" alt="Apple Music" />
+            </a>
+
+            <a href="https://www.amazon.com/music/player/artists/B0782FMR9W/deltaryz" target="_blank"
+                style="text-decoration: none;">
+                <img class="musicicon" src="svg/amazonmusic.svg" alt="Amazon Music" />
+            </a>
+
+            <br /><br />
+
+            <!-- Bandcamp embeds -->
+
+            <iframe class="bcembed" style="border: 0; width:100%; max-width: 600px; height: 120px;"
+                src="https://bandcamp.com/EmbeddedPlayer/track=995312915/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/artwork=small/transparent=false/"
+                seamless><a href="https://deltaryz.bandcamp.com/track/by-the-horns">By The Horns by ∆•RYZ</a></iframe>
+
+            <iframe class="bcembed" style="border: 0; width:100%; max-width: 600px; height: 120px;"
+                src="https://bandcamp.com/EmbeddedPlayer/track=3286196394/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=false/"
+                seamless><a href="https://deltaryz.bandcamp.com/track/sanctitude">Sanctitude by ∆•RYZ &amp;
+                    WoolyDrool</a></iframe>
+
+            <iframe class="bcembed" style="border: 0; width:100%; max-width: 600px; height: 120px;"
+                src="https://bandcamp.com/EmbeddedPlayer/track=1138442602/size=large/bgcol=ffffff/linkcol=63b2cc/tracklist=false/artwork=small/transparent=false/"
+                seamless><a href="https://deltaryz.bandcamp.com/track/bestest-friends">Bestest Friends by ∆•RYZ &amp;
+                    Layl</a></iframe>
+
+            <iframe class="bcembed" style="border: 0; width:100%; max-width: 600px; height: 120px;"
+                src="https://bandcamp.com/EmbeddedPlayer/track=3890403055/size=large/bgcol=ffffff/linkcol=f171a2/tracklist=false/artwork=small/transparent=false/"
+                seamless><a href="https://deltaryz.bandcamp.com/track/tomorrow-will-be-yesterday">Tomorrow Will Be
+                    Yesterday by ∆•RYZ &amp; Brohoof Studios</a></iframe>
+
+            <iframe class="bcembed" style="border: 0; width:100%; max-width: 600px; height: 120px;"
+                src="https://bandcamp.com/EmbeddedPlayer/track=2672894934/size=large/bgcol=ffffff/linkcol=2ebd35/tracklist=false/artwork=small/transparent=false/"
+                seamless><a href="https://deltaryz.bandcamp.com/track/best-friends">Best Friends by ∆•RYZ &amp;
+                    Layl</a></iframe>
+
+            <iframe class="bcembed" style="border: 0; width:100%; max-width: 600px; height: 120px;"
+                src="https://bandcamp.com/EmbeddedPlayer/track=64326397/size=large/bgcol=ffffff/linkcol=7137dc/tracklist=false/artwork=small/transparent=false/"
+                seamless><a href="https://deltaryz.bandcamp.com/track/-">ＥＵＫＬＹＤＥＡＮ by ∆•RYZ</a></iframe>
+
+            <iframe class="bcembed" style="border: 0; width:100%; max-width: 600px; height: 120px;"
+                src="https://bandcamp.com/EmbeddedPlayer/track=4244244110/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=false/"
+                seamless><a href="https://deltaryz.bandcamp.com/track/once-again">Once Again by ∆•RYZ</a></iframe>
+
+            <iframe class="bcembed" style="border: 0; width:100%; max-width: 600px; height: 120px;"
+                src="https://bandcamp.com/EmbeddedPlayer/track=969893731/size=large/bgcol=ffffff/linkcol=e99708/tracklist=false/artwork=small/transparent=false/"
+                seamless><a href="https://deltaryz.bandcamp.com/track/now-is-the-time">Now Is The Time by
+                    ∆•RYZ</a></iframe>
+
+            <iframe class="bcembed" style="border: 0; width:100%; max-width: 600px; height: 120px;"
+                src="https://bandcamp.com/EmbeddedPlayer/track=1437753348/size=large/bgcol=ffffff/linkcol=63b2cc/tracklist=false/artwork=small/transparent=false/"
+                seamless><a href="https://deltaryz.bandcamp.com/track/revive">REVIVE by Midli &amp;
+                    Techniponi</a></iframe>
+
+            <iframe class="bcembed" style="border: 0; width:100%; max-width: 600px; height: 120px;"
+                src="https://bandcamp.com/EmbeddedPlayer/track=1256451412/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/artwork=small/transparent=false/"
+                seamless><a href="https://deltaryz.bandcamp.com/track/giron-ryz-hardcore-bootleg">Giron (∆•RYZ Hardcore
+                    Bootleg) by Danganronpa</a></iframe>
+
+        </div>
+
+        <div class="mui-tabs__pane" id="pane-justified-3" style="text-align: center;">
+            <!-- Code Pane -->
+
+            <a href="https://github.com/deltaryz/sharez" target="_blank">
+                <img class="codelogo" src="img/sharez.png" alt="sharez" />
+            </a>
+
+            <br /><br />
+
+            <p style="transform: scale(0.95, 1); font-size: 12px; text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);">
+                Your Linux desktop recording prayers have been answered.
+            </p>
+
+            <p class="codeinfo" style="transform: scale(0.85, 1);">
+                <a href="https://github.com/deltaryz/sharez" target="_blank">sharez</a>
+                is a desktop recording utility for Linux,
+                <br />
+                engineered to minimize required clicks/keypresses
+                <br />
+                and be friendly to scripting and automation.
+            </p>
+
+            <br /><br />
+
+            <img src="https://raw.githubusercontent.com/deltaryz/sharez/main/img/demo.gif" class="codeimg" />
+
+            <img src="img/sharezoptions.png" class="codeimg" height="275px" />
+
+            <br /><br /><br />
+
+            <div class="mui-divider"></div>
+
+            <br /><br /><br />
+
+            <p class="gametitle">
+                BLOG
+            </p>
+
+            Custom blog frontend that generates pages from Markdown files
+
+            <br /><br />
+
+            <p class="codeinfo hoverthing">
+                <a href="https://blog.deltaryz.com target=" _blank">blog.deltaryz.com</a>
+            </p>
+
+            <br /><br /><br />
+
+            <div class="mui-divider"></div>
+
+            <br /><br />
+
+            <a href="https://github.com/deltaryz/e669-neo" target="_blank">
+                <img class="codelogo" src="img/e669.png" alt="e669" style="width:200px" />
+            </a>
+
+            <br /><br />
+
+            Alternate browsing experience for
+            <br />
+            <a href="https://e621.net" target="_blank">e621</a> and <a href="https://derpibooru.org"
+                target="_blank">Derpibooru</a>
+            <br />
+            prioritizing mobile and one-handed usage
+
+            <br /><br />
+
+            <p class="codeinfo hoverthing">
+                <a href="https://e669.fun" target="_blank">e669.fun</a>
+            </p>
+
+
+            <br /><br /><br />
+
+            <div class="mui-divider"></div>
+
+            <br /><br /><br />
+
+            <p class="gametitle">
+                "THE BEAUTY <br /> OF SIMPLICITY"
+            </p>
+
+            Live presentation for AlpineConf 2021
+
+            <br /><br />
+
+            <!-- Video link  -->
+            <a href="https://www.youtube.com/watch?v=bKvw85zfr3Y" target="_blank">
+                <img style="max-width: 90%; aspect-ratio: 16/9; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.312); margin-right: 8px; margin-bottom: 12px;"
+                    width="560" src="img/alpineconf.jpg" />
+            </a>
+
+            <br /><br /><br />
+
+        </div>
+
+        <div class="mui-tabs__pane" id="pane-justified-4" style="text-align: center;">
+            <!-- Games Pane -->
+
+            <p class="gametitle">
+                HORSE POWER
+            </p>
+
+            Submission for <a href="https://itch.io/jam/godot-wild-jam-68/rate/2661062" target="_blank">Godot Wild Jam
+                #68</a>
+            <br />
+            Playable in browser (Desktop and Android only)
+            <br /><br />
+            <p class="codeinfo hoverthing">
+                <b>Updated version available at
+                    <br />
+                    <a href="https://horsepower.deltaryz.com/" target="_blank">horsepower.deltaryz.com</a></b>
+            </p>
+
+            <br /><br />
+
+            <iframe width="100%" height="167" frameborder="0" src="https://itch.io/embed/2661062"><a
+                    href="https://deltaryz.itch.io/horse-power" target="_blank">Horse Power by ∆•RYZ</a></iframe>
+
+            <br /><br />
+
+            <img class="gameimg" src="img/horsepowerlogo.png" />
+
+            <img class="gameimg" src="img/horsepower.jpg" style="aspect-ratio: 16 / 9;" />
+
+            <br /><br /><br /><br />
+
+            <div class="mui-divider"></div>
+
+            <br /><br /><br />
+
+            <p class="gametitle">
+                GAME BOY GOES 2 SPACE
+            </p>
+
+            Submission for <a href="https://itch.io/jam/gbjam-11/rate/2279016" target="_blank">GBJam 11</a>
+            <br />
+            Playable in browser (All platforms)
+            <br />
+            Game Boy ROM
+            <br /><br />
+            <p class="codeinfo hoverthing">
+                <b>Play in GBC mode at
+                    <br />
+                    <a href="https://gbjam.deltaryz.com/" target="_blank">gbjam.deltaryz.com</a></b>
+            </p>
+
+            <br /><br />
+
+            <iframe src="https://itch.io/embed/2279016" width="100%" height="167" frameborder="0"><a
+                    href="https://deltaryz.itch.io/gbgoes2space" target="_blank">Game Boy Goes 2 Space by
+                    ∆•RYZ</a></iframe>
+
+            <br /><br />
+
+            <img class="gameimg" src="img/gbg2s.png" />
+
+            <img class="gameimg" src="img/gbg2sscreenshot.png" style="image-rendering: crisp-edges;" />
+
+            <img class="gameimg" src="img/gbg2sgameboy.jpg" />
+
+            <br /><br /><br /><br />
+
+            <div class="mui-divider"></div>
+
+            <br /><br /><br />
+
+            <p class="gametitle">
+                8-BALL DAYCARE
+            </p>
+
+            <br />
+
+            Submission for <a href="https://itch.io/jam/extra-credits-game-jam-6/rate/739135" target="_blank">Extra
+                Credits Game Jam
+                #6</a>
+            <br />
+            Downloadable for Mac and Windows
+
+            <br /><br /><br />
+
+            <iframe width="100%" height="167" frameborder="0" src="https://itch.io/embed/739135"><a
+                    href="https://woolydrool.itch.io/8-ball-daycare" target="_blank">8-Ball Daycare (ECGJ#6 submission)
+                    by WoolyDrool,
+                    ∆•RYZ</a></iframe>
+
+            <br /><br />
+
+            <img class="gameimg" src="img/8bd.png" />
+
+            <img class="gameimg" src="img/8bdscreenshot.jpg" />
+
+            <br /><br /><br />
+
+        </div>
+
+        <div class="mui-tabs__pane" id="pane-justified-5">
+            <p class="wip">
+                WORK IN PROGRESS
+                <br />
+                CHECK LATER
+            </p>
+        </div>
+
+    </div>
+
+    <br />
+
+    <div id="copyright" style="color: rgba(255, 255, 255, 0.7);">© 2024 Cameron Seid
+        <br />me @ deltaryz.com
+    </div>
+    <br /><br />
+</body>
+
+<script src="index.js"></script>
+
+</html>
