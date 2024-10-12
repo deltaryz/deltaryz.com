@@ -27,10 +27,10 @@ if (daysUntilSaturday === 0 && currentTime.getUTCHours() >= 1) {
 let upcomingSaturday = new Date(currentTime);
 upcomingSaturday.setUTCDate(currentTime.getUTCDate() + daysUntilSaturday);
 
-// Set the time to 1:00 AM UTC using setUTCHours
+// Set the time
 upcomingSaturday.setUTCHours(1, 0, 0, 0);  // 1:00 AM UTC
 
-// Convert to local timezone using toLocaleString with timeZone option
+// Convert to local timezone
 let localTime = new Date(upcomingSaturday.toLocaleString("en-US", { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone }));
 
 // Format the date without the year
@@ -43,7 +43,7 @@ let formattedDate = formatter.format(localTime);
 
 document.getElementById("localTime").innerHTML = formattedDate
 
-// Special text if it's happening nowhttps://dj.bronyradio.com/streamhq.mp3
+// Special text if it's happening now
 if(now) {
   let text = document.getElementById("localTime");
   text.innerHTML = "!! <a href=\"https://dj.bronyradio.com/streamhq.mp3\">RIGHT NOW</a> !!";
