@@ -55,6 +55,12 @@
   margin-bottom: 20px;
 }
 
+.newImg {
+  max-height: 50px;
+  filter: drop-shadow(1px 1px 1px black);
+  vertical-align: -10px;
+}
+
 .codelogo {
   filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.5));
   max-width: 80%;
