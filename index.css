@@ -16,11 +16,9 @@
 
 .mui-appbar {
   box-shadow: 0px 0px 15px #000000a8;
-  background-image: linear-gradient(
-    to bottom,
-    rgb(63, 226, 255),
-    rgb(255, 58, 189)
-  );
+  background-image: linear-gradient(to bottom,
+      rgb(63, 226, 255),
+      rgb(255, 58, 189));
 }
 
 .mui-btn {
@@ -139,11 +137,11 @@
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.mui-tabs__bar > li.mui--is-active {
+.mui-tabs__bar>li.mui--is-active {
   border-bottom: 0px;
 }
 
-.mui-tabs__bar > li.mui--is-active > a {
+.mui-tabs__bar>li.mui--is-active>a {
   transform: scale(1);
   text-shadow: 2px 2px 4px black;
   background-color: rgba(0, 204, 255, 0.538);
@@ -273,8 +271,19 @@ code {
   color: rgb(255, 207, 118);
 }
 
-:not(pre) > code {
+:not(pre)>code {
   background-color: #00000038;
   padding: 3px;
   border-radius: 5px;
+}
+
+#noticeBox {
+  background-color: #00000085;
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10px;
+  /* filter: drop-shadow(4px 4px 5px rgb(0, 0, 0)); */
 }
