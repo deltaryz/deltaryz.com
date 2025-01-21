@@ -278,6 +278,27 @@ code {
 }
 
 #noticeBox {
+  background-color: #00000060;
+  max-width: 330px;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10px;
+  /* filter: drop-shadow(4px 4px 5px rgb(0, 0, 0)); */
+}
+
+#recordings {
+  background-color: #00000060;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#noticeBox2 {
   background-color: #00000085;
   max-width: 600px;
   padding: 10px;
@@ -286,4 +307,8 @@ code {
   text-align: center;
   margin-bottom: 10px;
   /* filter: drop-shadow(4px 4px 5px rgb(0, 0, 0)); */
+}
+
+#localTime {
+  font-size: 18px;
 }

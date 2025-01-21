@@ -120,11 +120,16 @@
         <div class="mui-tabs__pane mui--is-active" id="pane-justified-1"
             style="max-width:100%; margin: 20px auto; text-align: center;">
 
-            <div id="noticeBox">
-                <b>NOTICE:</b><br />
-                Between NOV 2024 and JAN 2025,<br />∆•MIX was not broadcast.
-                <br /><br />
-                There will be no ∆•MIX on 2025-01-17
+            <!-- TODO: Put deltamix albumart to the left, show info on the right - maybe on desktop only? -->
+
+            <div id="noticeBox2">
+                ∆•MIX will be part of
+                <a href="https://ponyfest.horse/" style="color:rgb(240, 122, 255); text-shadow: 2px 2px 2px black;">
+                    <h2 style="margin-top:10px; font-size: 20px;"><b>PonyFestOnline x PonyvilleFM<br />14th Birthday
+                            Celebration</b><br />
+                    </h2>
+                </a>
+                on SUNDAY, 2025-01-26 at <b>6:00pm PST</b>
             </div>
 
             <br />
@@ -145,7 +150,7 @@
             </p>
 
             <p class="mui--text-headline deltamixtitle"
-                style="padding-top: 10px; text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.666);">
+                style="padding-top: 15px; text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.666);">
                 SATURDAY 1-2AM UTC
             </p>
 
@@ -153,12 +158,23 @@
             <p id="localTime" class="mui--text-title deltamixtitle"
                 style="transform: scale(0.8,1); text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);"></p>
 
+            <div id="noticeBox">
+                <b>NOTICE:</b><br />
+                Between NOV 2024 and JAN 2025,<br />∆•MIX was not broadcast.
+            </div>
+
+            <br />
+
             <a href="https://ponyvillefm.com/team/42" target="_blank">
                 <img src="img/deltamix.jpg"
                     style="max-height:350px; max-width: 90%; box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);" />
             </a>
 
-            <br /><br /><br /><br />
+            <br /><br /><br />
+
+            <div class="mui-divider"></div>
+
+            <br /><br />
 
             <!-- omega -->
             <a href="https://www.youtube.com/watch?v=LwQeOesGQHg" target="_blank">
@@ -179,10 +195,11 @@
             </a>
 
             <br /><br />
-            Recordings available at:
-            <br />
-            <a href="https://mixes.deltaryz.com/">mixes.deltaryz.com</a>
-            <br />
+            <div id="recordings">
+                Recordings available at:
+                <br />
+                <a href="https://mixes.deltaryz.com/">mixes.deltaryz.com</a>
+            </div>
 
         </div>
         <div class="mui-tabs__pane" id="pane-justified-2" style="text-align: center;">
