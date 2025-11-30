@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>∆•RYZ (DELTARYZ)</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#bb74ec">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#5B2A9C" />
+
+    <!-- Prevent caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Metadata/SEO -->
+    <meta name="description"
+        content="Music producer, DJ, developer, artist, graphic designer, weird autistic internet animal.">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="∆•RYZ (DELTARYZ)">
+    <meta property="og:description"
+        content="Music producer, DJ, developer, artist, graphic designer, weird autistic internet animal.">
+    <meta property="og:image" content="https://deltaryz.com/android-chrome-512x512.png">
+    <meta property="og:url" content="https://deltaryz.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:title" content="∆•RYZ (DELTARYZ)">
+    <meta name="twitter:description"
+        content="Music producer, DJ, developer, artist, graphic designer, weird autistic internet animal.">
+    <meta name="twitter:image" content="https://deltaryz.com/android-chrome-512x512.png">
+    <meta name="twitter:url" content="https://deltaryz.com/">
+
+    <!-- load MUI -->
+    <link href="//cdn.muicss.com/mui-0.10.3/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.10.3/js/mui.min.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+    <div class="mui-appbar">
+        <table width="97%" align="center">
+            <tr style="vertical-align: middle;">
+
+                <td class="mui--appbar-height" style="
+                text-align: center;
+                font-size: smaller;
+                letter-spacing: -1px;
+                color: rgba(0, 0, 0, 0.5);
+                filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
+                " width="110px">
+                    <a href="/">
+                        <img src="deltaryzlogo.png" style="height: 30px; padding-top: 2px; " />
+                    </a>
+                </td>
+
+                <td class="mui--appbar-height" style="
+                text-align: center;
+                font-size: smaller;
+                letter-spacing: -1px;
+                color: rgba(255, 255, 255, 0.5);
+                filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
+                ">
+                    pronounced <b>"delta rise"</b>
+                </td>
+
+                <td class="mui--appbar-height" align="right"
+                    style="padding-top: 9px; filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));">
+                    <div class="mui-textfield mui-textfield--float-label">
+
+                        <a class="nounderline" href="https://blog.deltaryz.com">
+                            <img src="svg/blog.svg" alt="Blog"
+                                style="filter: invert(1); height:25px; padding-right: 15px;" />
+                        </a>
+
+                        <a class="nounderline" href="https://github.com/deltaryz/deltaryz.com" target="_blank">
+                            <img src="svg/github.svg" alt="GitHub"
+                                style="filter: invert(1); height:25px; padding-right: 15px;" />
+                        </a>
+
+                        <a class="nounderline" href="https://music.deltaryz.com" target="_blank">
+                            <img src="svg/music-circle.svg" alt="Music" style="filter: invert(1); height:25px;" />
+                        </a>
+
+                    </div>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+
+    <br />
+
+    <div id="steamBox">
+
+        <br />
+
+        <button
+            style="width:60px; margin-right:5px; padding-top:5px; padding-bottom: 5px; background-color: lime; box-shadow: 2px 2px 3px #00000042; border-radius: 4px;">Copy</button>
+
+        <input type="text" id="launch_options" readonly="true"
+            value="MANGOHUD_CONFIG=fps_limit=200,ram,cpu_temp,gpu_temp gamemoderun mangohud %command%"
+            style="width: 85%; padding-top:5px; padding-bottom: 5px; box-shadow: 2px 2px 3px #00000042;" />
+
+        <div class="mui-row" style="width:90%; margin: 0 auto;">
+            <div class="mui-col-xs-6">
+                <!-- maybe have a toggle for "vulkan/ogl" at the top? -->
+                <h2>MangoHUD</h2>
+
+                - VSync (Vulkan)
+                <br />
+                - VSync (OpenGL)
+            </div>
+            <div class="mui-col-xs-6">
+                <h2>Gamescope</h2>
+            </div>
+            <div class="mui-col-xs-6">
+                <h2>GE-Proton</h2>
+            </div>
+            <div class="mui-col-xs-6">
+                <h2>Wine DLLs</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <br /><br />
+
+    <div id="copyright" style="color: rgba(255, 255, 255, 0.7);">© 2024 Cameron Seid
+        <br />me @ deltaryz.com
+    </div>
+    <br /><br />
+</body>
+
+<script>
+    let copyright = document.getElementById("copyright");
+
+    let settings = {
+        gamemode: {
+            enable: false
+        },
+        mangohud: {
+            enable: false
+        },
+        gamescope: {
+            enable: false
+        },
+        geproton: {
+            test: "c"
+        },
+        wine: {
+            test: "d"
+        },
+    }
+
+    copyright.innerHTML = "© 2024 - " + new Date().getFullYear() +
+        " Cameron Seid<br/>me @ deltaryz.com";
+
+    // Check all parameters and rebuild launch options - should be triggered on any change
+    let rebuildLaunchOptions = function () {
+
+    }
+</script>
+
+</html>
