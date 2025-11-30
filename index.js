@@ -80,3 +80,37 @@ const displayString = `${dayNames[TARGET_DAY_UTC]} ${fmt(startHour)}-${fmt(endHo
 
 // Apply to HTML
 scheduledTimeDisplay.textContent = displayString;
+
+// Check for youtube livestream (next if available, most recent otherwise)
+async function loadNextStream() {
+  const r = await fetch("/yt-next"); // this needs caddy proxy so it is accessible with https
+  const { videoId } = await r.json();
+
+  const container = document.getElementById("yt-container");
+
+  if (!videoId) {
+    container.innerHTML = "<p>No scheduled or live streams.</p>";
+    return;
+  }
+
+  // container.innerHTML = `
+  //   <iframe
+  //     width="560" height="315"
+  //     src="https://www.youtube.com/embed/${videoId}"
+  //     frameborder="0"
+  //     allowfullscreen
+  //   ></iframe>`;
+
+  container.innerHTML = `
+  <a href="https://www.youtube.com/watch?v=${videoId}">
+    <img
+      style="max-height:350px; max-width: 90%; padding-top:0px;"
+      src="https://img.youtube.com/vi/${videoId}/maxresdefault.jpg"
+      />
+  </a>
+  `
+
+  container.style.display = "block";
+}
+
+loadNextStream();
