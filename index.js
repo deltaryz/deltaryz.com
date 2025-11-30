@@ -1,54 +1,82 @@
 let postsContainer = document.getElementById("posts");
 let copyright = document.getElementById("copyright");
+let scheduledTimeDisplay = document.getElementById('deltamix-time-display');
 
 copyright.innerHTML = "© 2024 - " + new Date().getFullYear() +
   " Cameron Seid<br/>me @ deltaryz.com";
 
-// TIMEZONE CONVERSION WHEEEEE
+// ===== CONFIGURATION =====
+const TARGET_DAY_UTC = 1;     // 0 = Sunday, 1 = Monday, ... 6 = Saturday
+const TARGET_HOUR_UTC = 5;    // 05:00 UTC
+// ==========================
 
-// Get the current date and time in UTC
-let currentTime = new Date();
-
-// currentTime.setHours(20,0,0,0) // for testing
-
-// we set this to 'true' if it's actively on air
+// Current time
 let now = false;
+const currentTime = new Date();
 
-// Find the upcoming Saturday
-let dayOfWeek = currentTime.getUTCDay();
-let daysUntilSaturday = (6 - dayOfWeek + 7) % 7;  // Calculate days until next Saturday
-if (daysUntilSaturday === 0 && currentTime.getUTCHours() >= 1) {
-    // If today is Saturday and it's already past 1AM UTC, move to the next Saturday
-    daysUntilSaturday = 7;
+// Day-of-week math
+const dayOfWeek = currentTime.getUTCDay();
+let daysUntil = (TARGET_DAY_UTC - dayOfWeek + 7) % 7;
 
-    // check if it's still going
-    if(currentTime.getUTCHours() == 1) now = true;
+// If today *is* target day, check whether target hour already passed
+if (daysUntil === 0) {
+  const currentHour = currentTime.getUTCHours();
+  if (currentHour > TARGET_HOUR_UTC) {
+    daysUntil = 7;  // next week
+  } else if (currentHour === TARGET_HOUR_UTC) {
+    now = true;     // currently happening
+  }
 }
-let upcomingSaturday = new Date(currentTime);
-upcomingSaturday.setUTCDate(currentTime.getUTCDate() + daysUntilSaturday);
 
-// Set the time
-upcomingSaturday.setUTCHours(1, 0, 0, 0);  // 1:00 AM UTC
+// Build the target UTC datetime
+const targetDate = new Date(currentTime);
+targetDate.setUTCDate(currentTime.getUTCDate() + daysUntil);
+targetDate.setUTCHours(TARGET_HOUR_UTC, 0, 0, 0);
 
 // Convert to local timezone
-let localTime = new Date(upcomingSaturday.toLocaleString("en-US", { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone }));
+const localTime = new Date(
+  targetDate.toLocaleString("en-US", {
+    timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
+  })
+);
 
-// Format the date without the year
-let options = { 
-    weekday: 'long', month: 'long', day: 'numeric', 
-    hour: '2-digit', minute: '2-digit', timeZoneName: 'short' 
+// Format output
+const options = {
+  weekday: 'long',
+  month: 'long',
+  day: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  timeZoneName: 'short'
 };
-let formatter = new Intl.DateTimeFormat(undefined, options);
-let formattedDate = formatter.format(localTime);
+const formatter = new Intl.DateTimeFormat(undefined, options);
+const formatted = formatter.format(localTime);
 
-document.getElementById("localTime").innerHTML = formattedDate
-
-// Special text if it's happening now
-if(now) {
-  let text = document.getElementById("localTime");
-  text.innerHTML = "!! <a href=\"https://dj.bronyradio.com/streamhq.mp3\">RIGHT NOW</a> !!";
-  text.style.padding = "3px 0px 8px 0px";
-  text.style.transform = "scale(1.5,1.5)"
+// Write to page
+const el = document.getElementById("localTime");
+if (now) {
+  el.innerHTML = '!! <a href="https://dj.bronyradio.com/streamhq.mp3">RIGHT NOW</a> !!';
+  el.style.padding = "3px 0px 8px 0px";
+  el.style.transform = "scale(1.5,1.5)";
+} else {
+  el.innerHTML = formatted;
 }
 
-console.log(formattedDate); // Outputs the date in user's local timezone
+console.log(formatted);
+
+// Build "DAY HOUR–HOUR UTC" display
+const dayNames = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
+const startHour = TARGET_HOUR_UTC;
+const endHour = (TARGET_HOUR_UTC + 1) % 24;
+
+// Format UTC hour → AM/PM without minutes
+function fmt(h) {
+  const suffix = h >= 12 ? "PM" : "AM";
+  const hour12 = h % 12 === 0 ? 12 : h % 12;
+  return `${hour12}${suffix}`;
+}
+
+const displayString = `${dayNames[TARGET_DAY_UTC]} ${fmt(startHour)}-${fmt(endHour)} UTC`;
+
+// Apply to HTML
+scheduledTimeDisplay.textContent = displayString;
