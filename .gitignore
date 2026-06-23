@@ -8,3 +8,4 @@ p/
 .vscode/
 deno.lock
 *debug.log
+*lock~
